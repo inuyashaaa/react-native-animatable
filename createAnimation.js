@@ -24,6 +24,9 @@ function parsePosition(value) {
 const cache = {};
 
 export default function createAnimation(definition) {
+  if (!definition) {
+    return 
+  }
   const cacheKey = JSON.stringify(definition);
   if (cache[cacheKey]) {
     return cache[cacheKey];
